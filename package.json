@@ -1,0 +1,135 @@
+{
+  "name": "@tinyland-inc/tinyland-types",
+  "version": "0.1.0",
+  "description": "Shared type definitions for the Tinyland.dev platform",
+  "type": "module",
+  "license": "Zlib AND LicenseRef-Tinyland-Proprietary",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./content": {
+      "types": "./dist/content.d.ts",
+      "import": "./dist/content.js"
+    },
+    "./content-visibility": {
+      "types": "./dist/content-visibility.d.ts",
+      "import": "./dist/content-visibility.js"
+    },
+    "./content-components": {
+      "types": "./dist/content-components.d.ts",
+      "import": "./dist/content-components.js"
+    },
+    "./product": {
+      "types": "./dist/product.d.ts",
+      "import": "./dist/product.js"
+    },
+    "./product-transactions": {
+      "types": "./dist/product-transactions.d.ts",
+      "import": "./dist/product-transactions.js"
+    },
+    "./publishing": {
+      "types": "./dist/publishing.d.ts",
+      "import": "./dist/publishing.js"
+    },
+    "./activitypub-ui": {
+      "types": "./dist/activitypub-ui.d.ts",
+      "import": "./dist/activitypub-ui.js"
+    },
+    "./unified-content": {
+      "types": "./dist/unified-content.d.ts",
+      "import": "./dist/unified-content.js"
+    },
+    "./event": {
+      "types": "./dist/event.d.ts",
+      "import": "./dist/event.js"
+    },
+    "./blog": {
+      "types": "./dist/blog.d.ts",
+      "import": "./dist/blog.js"
+    },
+    "./profile": {
+      "types": "./dist/profile.d.ts",
+      "import": "./dist/profile.js"
+    },
+    "./admin": {
+      "types": "./dist/admin.d.ts",
+      "import": "./dist/admin.js"
+    },
+    "./commerce-schema": {
+      "types": "./dist/commerce-schema.d.ts",
+      "import": "./dist/commerce-schema.js"
+    },
+    "./metrics": {
+      "types": "./dist/metrics.d.ts",
+      "import": "./dist/metrics.js"
+    },
+    "./harness-config": {
+      "types": "./dist/harness-config.d.ts",
+      "import": "./dist/harness-config.js"
+    },
+    "./fingerprint-search": {
+      "types": "./dist/fingerprint-search.d.ts",
+      "import": "./dist/fingerprint-search.js"
+    },
+    "./calendar": {
+      "types": "./dist/calendar.d.ts",
+      "import": "./dist/calendar.js"
+    },
+    "./note": {
+      "types": "./dist/note.d.ts",
+      "import": "./dist/note.js"
+    },
+    "./video": {
+      "types": "./dist/video.d.ts",
+      "import": "./dist/video.js"
+    },
+    "./gallery": {
+      "types": "./dist/gallery.d.ts",
+      "import": "./dist/gallery.js"
+    },
+    "./stack": {
+      "types": "./dist/stack.d.ts",
+      "import": "./dist/stack.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "types",
+    "typescript",
+    "tinyland",
+    "content",
+    "activitypub"
+  ],
+  "author": "Tinyland.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/tinyland/tinyland.dev",
+    "directory": "packages/tinyland-types"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

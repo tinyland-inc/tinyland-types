@@ -4,7 +4,7 @@
  */
 
 import type { ContentVisibility } from './content-visibility.js';
-import type { VideoEmbed, Reference } from './blog.js';
+import type { VideoEmbed } from './blog.js';
 import type { AuthorReference } from './author.js';
 import type { NoteHarnessConfig } from './harness-config.js';
 

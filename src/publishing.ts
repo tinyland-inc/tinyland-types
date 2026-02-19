@@ -3,18 +3,7 @@
  * Lifecycle management for content
  */
 
-/**
- * Admin role type (local definition to avoid auth package dependency)
- */
-export type AdminRole =
-	| 'super_admin'
-	| 'admin'
-	| 'moderator'
-	| 'editor'
-	| 'event_manager'
-	| 'contributor'
-	| 'member'
-	| 'viewer';
+import type { AdminRole } from './admin.js';
 
 export type PublishingStatus =
 	| 'draft'

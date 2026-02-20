@@ -1,5 +1,5 @@
 /**
- * @tinyland-inc/tinyland-types
+ * @tummycrypt/tinyland-types
  * Shared type definitions for the Tinyland.dev platform.
  *
  * This is the barrel export file. Consumers can import from the root

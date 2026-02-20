@@ -1,5 +1,5 @@
 {
-  "name": "@tinyland-inc/tinyland-types",
+  "name": "@tummycrypt/tinyland-types",
   "version": "0.1.0",
   "description": "Shared type definitions for the Tinyland.dev platform",
   "type": "module",
@@ -130,6 +130,10 @@
     "vitest": "^4.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }

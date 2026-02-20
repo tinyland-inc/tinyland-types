@@ -234,7 +234,7 @@ export const VALIDATION_RULES = {
 	}
 } as const;
 
-/** Permission definitions (mirrors @tinyland-inc/tinyland-auth) */
+/** Permission definitions (mirrors @tummycrypt/tinyland-auth) */
 export const PERMISSIONS: Record<string, string> = {
 	'admin.access': 'Access admin panel',
 	'admin.users.manage': 'Manage users',

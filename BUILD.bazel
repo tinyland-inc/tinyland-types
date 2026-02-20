@@ -1,5 +1,5 @@
 """
-BUILD.bazel for @tinyland-inc/tinyland-types.
+BUILD.bazel for @tummycrypt/tinyland-types.
 
 Dual-mode build: works with both pnpm (standalone) and Bazel (CI/production).
   Standalone: cd packages/tinyland-types && pnpm build
@@ -58,7 +58,7 @@ npm_package(
         "LICENSE",
         ":tinyland_types",
     ],
-    package = "@tinyland-inc/tinyland-types",
+    package = "@tummycrypt/tinyland-types",
     version = "0.1.0",
     visibility = ["//visibility:public"],
 )

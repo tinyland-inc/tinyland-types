@@ -1,6 +1,6 @@
-/**
- * Product Type Definitions
- */
+
+
+
 
 import type { TransactionMethod, TransactionType } from './product-transactions.js';
 import type { ProductHarnessConfig } from './harness-config.js';
@@ -128,9 +128,9 @@ export interface ProductDisplay {
 	githubUrl?: string;
 }
 
-/**
- * Get the primary transaction method for a product
- */
+
+
+
 export function getPrimaryTransaction(
 	product: ProductFrontmatter
 ): TransactionMethod | undefined {

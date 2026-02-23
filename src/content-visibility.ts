@@ -1,28 +1,28 @@
-/**
- * Unified Visibility Types
- * Standardized visibility model across all content types
- * Maps directly to ActivityPub addressing
- */
 
-/**
- * Content visibility options (ActivityPub-compatible)
- */
+
+
+
+
+
+
+
+
 export type ContentVisibility = 'public' | 'unlisted' | 'followers' | 'private' | 'direct';
 
-/**
- * Visibility values as const array for Zod schemas
- */
+
+
+
 export const CONTENT_VISIBILITY_VALUES = ['public', 'unlisted', 'followers', 'private', 'direct'] as const;
 
-/**
- * Legacy RBAC visibility values (deprecated - use ContentVisibility instead)
- * @deprecated Use ContentVisibility instead
- */
+
+
+
+
 export type LegacyRBACVisibility = 'public' | 'members' | 'admin' | 'private';
 
-/**
- * Migrate legacy RBAC visibility to ActivityPub-compatible ContentVisibility
- */
+
+
+
 export function migrateVisibility(legacy: string | undefined): ContentVisibility {
 	if (!legacy) return 'public';
 
@@ -48,16 +48,16 @@ export function migrateVisibility(legacy: string | undefined): ContentVisibility
 	}
 }
 
-/**
- * Check if a visibility value is a valid ContentVisibility
- */
+
+
+
 export function isValidVisibility(value: string): value is ContentVisibility {
 	return CONTENT_VISIBILITY_VALUES.includes(value as ContentVisibility);
 }
 
-/**
- * ActivityPub addressing based on visibility
- */
+
+
+
 export interface ActivityPubAddressing {
 	to: string[];
 	cc: string[];
@@ -65,9 +65,9 @@ export interface ActivityPubAddressing {
 	bcc?: string[];
 }
 
-/**
- * Get ActivityPub addressing for a visibility level
- */
+
+
+
 export function getAddressingForVisibility(
 	visibility: ContentVisibility,
 	actorUrl: string,
@@ -92,9 +92,9 @@ export function getAddressingForVisibility(
 	}
 }
 
-/**
- * Infer visibility from ActivityPub addressing
- */
+
+
+
 export function inferVisibilityFromAddressing(
 	to: string[],
 	cc: string[],
@@ -112,9 +112,9 @@ export function inferVisibilityFromAddressing(
 	return 'private';
 }
 
-/**
- * Check if content should be visible to a user
- */
+
+
+
 export function isVisibleTo(
 	visibility: ContentVisibility,
 	viewerHandle: string | null,
@@ -136,9 +136,9 @@ export function isVisibleTo(
 	}
 }
 
-/**
- * Human-readable visibility labels
- */
+
+
+
 export const VISIBILITY_LABELS: Record<ContentVisibility, string> = {
 	public: 'Public',
 	unlisted: 'Unlisted',
@@ -147,9 +147,9 @@ export const VISIBILITY_LABELS: Record<ContentVisibility, string> = {
 	direct: 'Direct Message'
 };
 
-/**
- * Visibility icons (using Iconify names)
- */
+
+
+
 export const VISIBILITY_ICONS: Record<ContentVisibility, string> = {
 	public: 'mdi:earth',
 	unlisted: 'mdi:lock-open-outline',

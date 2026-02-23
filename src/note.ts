@@ -1,65 +1,65 @@
-/**
- * Note Type Definitions
- * For microblog posts (ActivityPub Note objects)
- */
+
+
+
+
 
 import type { ContentVisibility } from './content-visibility.js';
 import type { VideoEmbed } from './blog.js';
 import type { AuthorReference } from './author.js';
 import type { NoteHarnessConfig } from './harness-config.js';
 
-// Re-export for convenience
+
 export type { NoteHarnessConfig };
 
-/**
- * Note frontmatter for MDsveX
- */
-export interface NoteFrontmatter {
-	// Content
-	content?: string; // Short-form content (can also be in body)
 
-	// Publishing
+
+
+export interface NoteFrontmatter {
+	
+	content?: string; 
+
+	
 	publishedAt?: string;
 	updatedAt?: string;
 	visibility?: ContentVisibility;
 	published?: boolean;
 
-	// Author
-	/**
-	 * Author reference object containing name, handle, and optional avatar.
-	 * @deprecated String format (handle only) is deprecated. Use AuthorReference object format.
-	 * For backwards compatibility, string values are still accepted but
-	 * will be treated as the author handle.
-	 */
+	
+	
+
+
+
+
+
 	author?: AuthorReference | string;
 
-	// Conversation threading
-	inReplyTo?: string; // URL of parent note/post
-	conversation?: string; // Conversation/thread ID
+	
+	inReplyTo?: string; 
+	conversation?: string; 
 
-	// Content warnings
+	
 	sensitive?: boolean;
 	spoilerText?: string;
 
-	// Attachments
+	
 	images?: string[];
 	videos?: VideoEmbed[];
 
-	// Mentions and tags
-	mentions?: string[]; // @handle references
+	
+	mentions?: string[]; 
 	hashtags?: string[];
 
-	// Engagement (federated)
+	
 	likes?: number;
 	boosts?: number;
 	replies?: number;
 
-	// ActivityPub
+	
 	activityPubId?: string;
 	url?: string;
 
-	// UI Configuration
-	/** NoteHarness rendering configuration */
+	
+	
 	ui?: NoteHarnessConfig;
 }
 
@@ -87,9 +87,9 @@ export interface NoteDisplay {
 	replies: number;
 }
 
-/**
- * Convert Note to display format
- */
+
+
+
 export function noteToDisplay(note: Note): NoteDisplay {
 	const { frontmatter } = note;
 

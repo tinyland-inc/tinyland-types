@@ -1,6 +1,6 @@
-/**
- * Event Type Definitions
- */
+
+
+
 
 import type { EventHarnessConfig } from './harness-config.js';
 import type { AuthorReference } from './author.js';

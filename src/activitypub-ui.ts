@@ -1,15 +1,15 @@
-/**
- * ActivityPub UI Types
- * Types for ActivityPub engagement components and federation UI
- */
+
+
+
+
 
 import type { ContentVisibility } from './content-visibility.js';
 
 export type { ContentVisibility };
 
-/**
- * Engagement statistics for ActivityPub objects
- */
+
+
+
 export interface ActivityPubStats {
 	likes: number;
 	boosts: number;
@@ -18,9 +18,9 @@ export interface ActivityPubStats {
 	boosted?: boolean;
 }
 
-/**
- * API response for engagement actions
- */
+
+
+
 export interface EngagementActionResponse {
 	success: boolean;
 	stats?: ActivityPubStats;
@@ -28,9 +28,9 @@ export interface EngagementActionResponse {
 	pendingFederation?: boolean;
 }
 
-/**
- * Federation status for content
- */
+
+
+
 export interface FederationStatus {
 	federated: boolean;
 	instanceCount?: number;
@@ -38,9 +38,9 @@ export interface FederationStatus {
 	lastFederatedAt?: string;
 }
 
-/**
- * Visibility display configuration
- */
+
+
+
 export interface VisibilityConfig {
 	visibility: ContentVisibility;
 	icon: string;
@@ -49,9 +49,9 @@ export interface VisibilityConfig {
 	colorClass: string;
 }
 
-/**
- * Get visibility configuration for display
- */
+
+
+
 export function getVisibilityConfig(visibility: ContentVisibility): VisibilityConfig {
 	const configs: Record<ContentVisibility, VisibilityConfig> = {
 		public: {
@@ -94,14 +94,14 @@ export function getVisibilityConfig(visibility: ContentVisibility): VisibilityCo
 	return configs[visibility] ?? configs.public;
 }
 
-/**
- * Action types for engagement
- */
+
+
+
 export type EngagementAction = 'like' | 'boost' | 'reply';
 
-/**
- * Pending action state for optimistic updates
- */
+
+
+
 export interface PendingAction {
 	action: EngagementAction;
 	objectUrl: string;

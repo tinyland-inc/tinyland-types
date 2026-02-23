@@ -1,6 +1,6 @@
-/**
- * Schema.org Offer types for ActivityPub commerce federation
- */
+
+
+
 
 export type OfferAvailability =
 	| 'InStock' | 'OutOfStock' | 'PreOrder' | 'SoldOut'

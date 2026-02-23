@@ -1,7 +1,7 @@
-/**
- * Admin user types and interfaces
- * App-specific user management types.
- */
+
+
+
+
 
 export type AdminRole =
 	| 'super_admin'
@@ -62,11 +62,11 @@ export interface AdminUser {
 		};
 	};
 	backupCodes?: string[];
-	/** @deprecated Use certificateCn instead */
+	
 	certificate_cn?: string;
-	/** @deprecated Use invitedBy instead */
+	
 	invited_by?: string;
-	/** @deprecated Use invitationToken instead */
+	
 	invitation_token?: string;
 }
 
@@ -153,17 +153,17 @@ export interface AdminActivityLog {
 	userAgent: string | null;
 	details: unknown | null;
 	createdAt: string;
-	/** @deprecated Use adminUserId instead */
+	
 	admin_user_id?: string;
-	/** @deprecated Use resourceType instead */
+	
 	resource_type?: string;
-	/** @deprecated Use resourceId instead */
+	
 	resource_id?: string | null;
-	/** @deprecated Use ipAddress instead */
+	
 	ip_address?: string | null;
-	/** @deprecated Use userAgent instead */
+	
 	user_agent?: string | null;
-	/** @deprecated Use createdAt instead */
+	
 	created_at?: string;
 }
 
@@ -234,7 +234,7 @@ export const VALIDATION_RULES = {
 	}
 } as const;
 
-/** Permission definitions (mirrors @tummycrypt/tinyland-auth) */
+
 export const PERMISSIONS: Record<string, string> = {
 	'admin.access': 'Access admin panel',
 	'admin.users.manage': 'Manage users',

@@ -1,6 +1,6 @@
-/**
- * Profile type definitions
- */
+
+
+
 
 import type { ContentVisibility } from './content-visibility.js';
 

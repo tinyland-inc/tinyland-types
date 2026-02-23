@@ -1,23 +1,23 @@
-/**
- * UI Harness Composability Types
- * Configuration types for the universal content wrapper system.
- *
- * Note: ContentShellProps and GridConfig are SvelteKit-specific and remain
- * in the monorepo at src/lib/types/harness-config.ts. This package contains
- * only the portable type definitions.
- */
+
+
+
+
+
+
+
+
 
 import type { ProgressVariant, SeriesPost, RelatedItem } from './content-components.js';
 import type { BlogFrontmatter } from './blog.js';
 import type { ActivityPubStats, FederationStatus } from './activitypub-ui.js';
 import type { ProductFrontmatter } from './product.js';
 
-// Re-export for consumers
+
 export type { ProgressVariant, SeriesPost } from './content-components.js';
 
-// ============================================================================
-// Base Harness Configuration
-// ============================================================================
+
+
+
 
 export type LayoutMode = 'full' | 'prose' | 'wide';
 export type SidebarPosition = 'left' | 'right';
@@ -71,9 +71,9 @@ export const LAYOUT_WIDTH_CLASSES: Record<LayoutMode, string> = {
 	wide: 'max-w-6xl'
 } as const;
 
-// ============================================================================
-// Blog Harness Types
-// ============================================================================
+
+
+
 
 export interface BlogHarnessConfig extends HarnessConfig {
 	showReadingProgress?: boolean;
@@ -103,9 +103,9 @@ export interface BlogHarnessProps {
 	class?: string;
 }
 
-// ============================================================================
-// Event Harness Types
-// ============================================================================
+
+
+
 
 export interface EventHarnessConfig extends HarnessConfig {
 	showCalendarButton?: boolean;
@@ -114,9 +114,9 @@ export interface EventHarnessConfig extends HarnessConfig {
 	showRelatedEvents?: boolean;
 }
 
-// ============================================================================
-// Product Harness Types
-// ============================================================================
+
+
+
 
 export interface ProductHarnessConfig extends HarnessConfig {
 	showPricing?: boolean;
@@ -149,9 +149,9 @@ export interface ProductHarnessProps {
 	class?: string;
 }
 
-// ============================================================================
-// Note Harness Types
-// ============================================================================
+
+
+
 
 export interface NoteHarnessConfig extends HarnessConfig {
 	showReplies?: boolean;
@@ -166,9 +166,9 @@ export interface NoteHarnessConfig extends HarnessConfig {
 	showTimestamp?: boolean;
 }
 
-// ============================================================================
-// Video Harness Types
-// ============================================================================
+
+
+
 
 export interface VideoHarnessConfig extends HarnessConfig {
 	showRelated?: boolean;
@@ -185,9 +185,9 @@ export interface VideoHarnessConfig extends HarnessConfig {
 	showActivityPub?: boolean;
 }
 
-// ============================================================================
-// Gallery Harness Types
-// ============================================================================
+
+
+
 
 export type GalleryLayoutMode = 'grid' | 'masonry' | 'carousel' | 'justified';
 
@@ -207,9 +207,9 @@ export interface GalleryHarnessConfig extends HarnessConfig {
 	showActivityPub?: boolean;
 }
 
-// ============================================================================
-// Stack Harness Types
-// ============================================================================
+
+
+
 
 export interface StackHarnessConfig extends HarnessConfig {
 	showDiagram?: boolean;
@@ -224,9 +224,9 @@ export interface StackHarnessConfig extends HarnessConfig {
 	showIcons?: boolean;
 }
 
-// ============================================================================
-// Program Harness Types
-// ============================================================================
+
+
+
 
 export interface ProgramHarnessConfig extends HarnessConfig {
 	showSchedule?: boolean;

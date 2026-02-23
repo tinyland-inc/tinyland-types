@@ -1,7 +1,7 @@
-/**
- * Unified Content Types
- * Central definitions for all content-related types with fediverse integration
- */
+
+
+
+
 
 import type { ContentVisibility } from './content-visibility.js';
 import type { TransactionMethod, TransactionType } from './product-transactions.js';

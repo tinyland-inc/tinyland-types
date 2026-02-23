@@ -1,4 +1,4 @@
-// Calendar system type definitions
+
 
 export interface CollectionConfig {
 	name: string;
@@ -88,7 +88,7 @@ export interface RecurrenceUpdate {
 }
 
 export interface Permissions {
-	read: string[]; // user roles
+	read: string[]; 
 	write: string[];
 	admin: string[];
 }

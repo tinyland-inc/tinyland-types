@@ -1,6 +1,6 @@
-/**
- * Blog post type definitions
- */
+
+
+
 
 import type { ContentVisibility } from './content-visibility.js';
 import type { AuthorReference } from './author.js';
@@ -8,9 +8,9 @@ import type { BlogHarnessConfig } from './harness-config.js';
 
 export type { BlogHarnessConfig };
 
-/**
- * Video embed information for blog posts
- */
+
+
+
 export interface VideoEmbed {
 	url: string;
 	title: string;
@@ -19,9 +19,9 @@ export interface VideoEmbed {
 	videoId?: string;
 }
 
-/**
- * External reference/citation information
- */
+
+
+
 export interface Reference {
 	title: string;
 	url: string;
@@ -29,9 +29,9 @@ export interface Reference {
 	author?: string;
 }
 
-/**
- * Blog post frontmatter interface
- */
+
+
+
 export interface BlogFrontmatter {
 	title: string;
 	date?: string;

@@ -1,60 +1,60 @@
-/**
- * Content Component Types
- * Shared types for reusable content sub-components
- */
+
+
+
+
 
 import type { ContentVisibility } from './content-visibility.js';
 
-// ============================================================================
-// Reading Progress Types
-// ============================================================================
 
-/**
- * Reading progress variant
- */
+
+
+
+
+
+
 export type ProgressVariant = 'circular' | 'bar';
 
-// ============================================================================
-// Series Navigation Types
-// ============================================================================
 
-/**
- * Post in a series
- */
+
+
+
+
+
+
 export interface SeriesPost {
-	/** URL slug */
+	
 	slug: string;
-	/** Post title */
+	
 	title: string;
-	/** Order within series (1-based) */
+	
 	order: number;
 }
 
-// ============================================================================
-// Author Types
-// ============================================================================
 
-/**
- * Author information for content display
- */
+
+
+
+
+
+
 export interface ContentAuthor {
-	/** Display name */
+	
 	name: string;
-	/** Handle/username (without @) */
+	
 	handle?: string;
-	/** Avatar image URL */
+	
 	avatar?: string;
-	/** Profile URL (local) */
+	
 	url?: string;
-	/** ActivityPub actor URL (for federation) */
+	
 	actorUrl?: string;
-	/** Author bio/description */
+	
 	bio?: string;
 }
 
-/**
- * Props for AuthorCard component
- */
+
+
+
 export interface AuthorCardProps {
 	author: ContentAuthor;
 	variant?: 'compact' | 'full';
@@ -63,13 +63,13 @@ export interface AuthorCardProps {
 	class?: string;
 }
 
-// ============================================================================
-// Meta Badge Types
-// ============================================================================
 
-/**
- * Props for MetaBadges component
- */
+
+
+
+
+
+
 export interface MetaBadgesProps {
 	publishedAt?: string;
 	updatedAt?: string;
@@ -83,13 +83,13 @@ export interface MetaBadgesProps {
 	class?: string;
 }
 
-// ============================================================================
-// Hero Image Types
-// ============================================================================
 
-/**
- * Props for HeroImage component
- */
+
+
+
+
+
+
 export interface HeroImageProps {
 	src: string;
 	alt: string;
@@ -101,22 +101,22 @@ export interface HeroImageProps {
 	class?: string;
 }
 
-// ============================================================================
-// Content Title Types
-// ============================================================================
 
-/**
- * Badge configuration for content titles
- */
+
+
+
+
+
+
 export interface ContentBadge {
 	label: string;
 	preset?: string;
 	icon?: string;
 }
 
-/**
- * Props for ContentTitle component
- */
+
+
+
 export interface ContentTitleProps {
 	title: string;
 	subtitle?: string;
@@ -125,13 +125,13 @@ export interface ContentTitleProps {
 	class?: string;
 }
 
-// ============================================================================
-// Frontmatter Normalization
-// ============================================================================
 
-/**
- * Normalized frontmatter for display components
- */
+
+
+
+
+
+
 export interface NormalizedFrontmatter {
 	title: string;
 	subtitle?: string;
@@ -149,9 +149,9 @@ export interface NormalizedFrontmatter {
 	tags?: string[];
 }
 
-/**
- * Normalize various frontmatter formats to consistent structure
- */
+
+
+
 export function normalizeFrontmatter(
 	frontmatter: Record<string, unknown>
 ): NormalizedFrontmatter {
@@ -227,13 +227,13 @@ export function normalizeFrontmatter(
 	};
 }
 
-// ============================================================================
-// Related Content Types
-// ============================================================================
 
-/**
- * Related content item (post or product)
- */
+
+
+
+
+
+
 export interface RelatedItem {
 	slug: string;
 	title: string;

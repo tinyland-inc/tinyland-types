@@ -1,7 +1,7 @@
-/**
- * Publishing Workflow Types
- * Lifecycle management for content
- */
+
+
+
+
 
 import type { AdminRole } from './admin.js';
 

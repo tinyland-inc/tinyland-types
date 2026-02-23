@@ -1,8 +1,8 @@
-/**
- * Metrics Type Definitions
- *
- * Type definitions for metrics and observability data.
- */
+
+
+
+
+
 
 export interface TimeRange {
 	from: string;
@@ -101,7 +101,7 @@ export interface LogEntry {
 	labels: Record<string, string>;
 }
 
-// Enhanced metrics types
+
 export interface EnhancedMetricsResponse {
 	metrics: {
 		performance: MetricSeries[];
@@ -121,7 +121,7 @@ export interface RealtimeMetrics {
 	timestamp: number;
 }
 
-// System health metrics
+
 export interface SystemHealth {
 	cpuUsage: number;
 	memoryUsage: number;
@@ -136,7 +136,7 @@ export interface SystemHealth {
 	timestamp?: number;
 }
 
-// Client-side metrics
+
 export interface ClientMetrics {
 	pageLoadTime: number;
 	domContentLoaded?: number;
@@ -149,7 +149,7 @@ export interface ClientMetrics {
 	timestamp?: number;
 }
 
-// Accessibility metrics
+
 export interface AccessibilityMetrics {
 	violationsCount?: number;
 	passesCount?: number;
@@ -171,7 +171,7 @@ export interface AccessibilityMetrics {
 	timestamp?: number;
 }
 
-// Performance metrics
+
 export interface PerformanceMetrics {
 	responseTime: number;
 	throughput: number;
@@ -187,7 +187,7 @@ export interface PerformanceMetrics {
 	timestamp?: number;
 }
 
-// Enhanced metrics data
+
 export interface EnhancedMetricsData {
 	system: SystemHealth;
 	client: ClientMetrics;

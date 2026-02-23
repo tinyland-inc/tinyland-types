@@ -1,9 +1,9 @@
-/**
- * Product Transaction Types
- * Defines the 15 transaction methods for products
- */
 
-/** All supported transaction types */
+
+
+
+
+
 export type TransactionType =
 	| 'inquiry'
 	| 'ebay'
@@ -21,7 +21,7 @@ export type TransactionType =
 	| 'kofi'
 	| 'contribute-to-consume';
 
-/** Transaction method configuration */
+
 export interface TransactionMethod {
 	type: TransactionType;
 	enabled: boolean;
@@ -32,7 +32,7 @@ export interface TransactionMethod {
 	priority?: number;
 }
 
-/** Type-specific configuration options */
+
 export type TransactionConfig =
 	| InquiryConfig
 	| MarketplaceConfig
@@ -81,7 +81,7 @@ export interface ContributeConfig {
 	instructions?: string;
 }
 
-/** Default labels for transaction types */
+
 export const TRANSACTION_LABELS: Record<TransactionType, string> = {
 	inquiry: 'Inquire',
 	ebay: 'Buy on eBay',
@@ -100,7 +100,7 @@ export const TRANSACTION_LABELS: Record<TransactionType, string> = {
 	'contribute-to-consume': 'Contribute to Access'
 };
 
-/** Icons for transaction types */
+
 export const TRANSACTION_ICONS: Record<TransactionType, string> = {
 	inquiry: 'mdi:email-outline',
 	ebay: 'simple-icons:ebay',
@@ -119,14 +119,14 @@ export const TRANSACTION_ICONS: Record<TransactionType, string> = {
 	'contribute-to-consume': 'mdi:hand-heart-outline'
 };
 
-/** Helper to get enabled transactions sorted by priority */
+
 export function getEnabledTransactions(methods: TransactionMethod[]): TransactionMethod[] {
 	return methods
 		.filter((m) => m.enabled)
 		.sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99));
 }
 
-/** Helper to get transaction label */
+
 export function getTransactionLabel(method: TransactionMethod): string {
 	return method.label ?? TRANSACTION_LABELS[method.type];
 }

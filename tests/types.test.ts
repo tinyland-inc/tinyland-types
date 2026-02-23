@@ -1,13 +1,13 @@
-/**
- * tinyland-types barrel export and type-level tests.
- *
- * Verifies that the barrel export re-exports all expected types, that
- * const objects contain correct keys, and that runtime helpers behave
- * correctly.
- */
+
+
+
+
+
+
+
 import { describe, it, expect, expectTypeOf } from 'vitest';
 
-// ---- Type-only imports (compile-time checks) ----
+
 import type {
 	ContentVisibility,
 	BlogFrontmatter,
@@ -29,7 +29,7 @@ import type {
 	SystemHealth,
 } from '../src/index';
 
-// ---- Runtime imports ----
+
 import {
 	CONTENT_VISIBILITY_VALUES,
 	VISIBILITY_LABELS,
@@ -55,9 +55,9 @@ import {
 	noteToDisplay,
 } from '../src/index';
 
-// =========================================================================
-// Type-level assertions
-// =========================================================================
+
+
+
 
 describe('type-level assertions', () => {
 	it('ContentVisibility is a string literal union', () => {
@@ -112,9 +112,9 @@ describe('type-level assertions', () => {
 	});
 });
 
-// =========================================================================
-// Const object validations
-// =========================================================================
+
+
+
 
 describe('const object validations', () => {
 	it('CONTENT_VISIBILITY_VALUES contains all 5 levels', () => {
@@ -183,9 +183,9 @@ describe('const object validations', () => {
 	});
 });
 
-// =========================================================================
-// Runtime helper functions
-// =========================================================================
+
+
+
 
 describe('runtime helpers', () => {
 	it('migrateVisibility maps legacy values', () => {
@@ -222,7 +222,7 @@ describe('runtime helpers', () => {
 		const resolved = resolveHarnessConfig({ layout: 'wide', showSidebar: true });
 		expect(resolved.layout).toBe('wide');
 		expect(resolved.showSidebar).toBe(true);
-		expect(resolved.showHeader).toBe(true); // default preserved
+		expect(resolved.showHeader).toBe(true); 
 	});
 
 	it('normalizeFrontmatter extracts title and author', () => {

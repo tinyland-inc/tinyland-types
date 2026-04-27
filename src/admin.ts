@@ -62,11 +62,16 @@ export interface AdminUser {
 		};
 	};
 	backupCodes?: string[];
-	
+
+	// GitHub OAuth linking
+	githubId?: number | null;
+	githubLogin?: string | null;
+	githubLinkedAt?: string | null;
+
 	certificate_cn?: string;
-	
+
 	invited_by?: string;
-	
+
 	invitation_token?: string;
 }
 

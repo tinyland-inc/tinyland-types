@@ -1,6 +1,6 @@
 {
   "name": "@tummycrypt/tinyland-types",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Shared type definitions for the Tinyland.dev platform",
   "type": "module",
   "license": "Zlib AND LicenseRef-Tinyland-Proprietary",

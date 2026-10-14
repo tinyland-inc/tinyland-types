@@ -1,7 +1,8 @@
 {
   "name": "@tummycrypt/tinyland-types",
   "version": "0.2.3",
-  "description": "Shared type definitions for the Tinyland.dev platform",
+  "private": true,
+  "description": "RETIRED 2026-10-14: shared Tinyland type definitions; use tummycrypt_tinyland_content_types via the Tinyland Bazel registry",
   "type": "module",
   "license": "Zlib AND LicenseRef-Tinyland-Proprietary",
   "main": "./dist/index.js",
@@ -108,7 +109,6 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm build && pnpm check:package",
     "check:package": "publint"
   },
   "keywords": [
@@ -121,7 +121,7 @@
   "author": "Tinyland.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinyland-inc/tinyland-types.git"
+    "url": "git+https://github.com/xoxd-ai/tinyland-types.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -133,13 +133,9 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "packageManager": "pnpm@10.13.1",
-  "homepage": "https://github.com/tinyland-inc/tinyland-types",
+  "homepage": "https://github.com/xoxd-ai/tinyland-content-types",
   "bugs": {
-    "url": "https://github.com/tinyland-inc/tinyland-types/issues"
+    "url": "https://github.com/xoxd-ai/tinyland-content-types/issues"
   }
 }
